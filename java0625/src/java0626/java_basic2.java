@@ -128,6 +128,8 @@ public class java_basic2 {
 		
 		System.out.printf("세 과목의 총점은 %d praise The Sun!\n" , totalPoint);
 		System.out.printf("세 과목의 평균은 %d praise The Sun!", average);
+		
+		
 	}
 
 }
