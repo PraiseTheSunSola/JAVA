@@ -1,5 +1,7 @@
 package java0627;
 
+import java.util.Scanner;
+
 public class java_basic3 {
 
 	public static void main(String[] args) {
@@ -12,12 +14,47 @@ public class java_basic3 {
 		조건식비교 -> 거짓이라면 -> 끝
 		*/
 		
-		for(int i=1; i<=3; i++) { // 배열에 적합한 반복문은 for문 
-			
+//		for(int i=1;  i<10; i++) { // 배열에 적합한 반복문은 for문 
+//			
+//				System.out.println("아... 반복문... " +(2*i-1));
+//		}
+//		
+//		for(int i=10; i>0; i--) { // 맨 끝 인덱스부터 호출하기.
+//			System.out.println(i);
+//		}
+		
+//		int num = 1;
+//		int a=1;
+//		num = num +a;
+//		System.out.println(num); // 2
+//		a++;
+//		
+//		num = num + a;
+//		System.out.println(num);  // 4
+//		a++;
+//		
+//		num = num + a;
+//		System.out.println(num);  // 7
+//		a++;
+	
+//		int num = 1;
+//		for(int a=1; a<=3; a++) {
+//			num = num + a;
+//			System.out.println(num);
+//		}
+		
+		int num = 0;
+		// 1부터 내가 입력한 숫자까지의 총합을 구하세요.
+		Scanner sun = new Scanner(System.in);
+		
+		System.out.print("숫자 입력 : ");
+		int number = sun.nextInt();
+		
+		int sum = 0;
+		for(int i=1; i<=number; i++) {
+			sum = sum + i;
 		}
-		
-		
-		
+		System.out.println( " 총합 : "+ sum);
 		
 	}
 
