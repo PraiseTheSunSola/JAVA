@@ -19,21 +19,23 @@ public class java_basic3 {
 		*/
 		
 		Scanner sun = new Scanner(System.in);
+		Integer.parseInt(sun.nextLine());
 		
 		float tax = 0.08f;
+		// 초기화를 습관화 하자. 
+		String Sola = null;
+		String Team1 = null;
+		int solaPay = 0;
 		
-		String Sola;
-		String Team1;
-		int solaPay;
 		
+		String Artorias = null;
+		String Team2 = null;
+		int artoriasPay = 0;
 		
-		String Artorias;
-		String Team2;
-		int artoriasPay;
-		
+		int  salary =0;  // 이렇게 입력하면 아래에서도 선언 가능함. 재사용 가능		
 
 		
-		
+//		System.out.println("이름  : " + name + " 부서 : " +team+ "  수령액 : " +  salary) 로 표현 할수 있고 변수를 통일해서 사용해도 문제없다. 이 문제의 경우 
 		System.out.print("이름 :  " );
 		Sola = sun.next();
 		System.out.print("소속부서:  " );
@@ -49,8 +51,36 @@ public class java_basic3 {
 // 작은 쪽에서 큰 쪽으로는 자동형변환이 되고, 큰 쪽에서 작은 쪽은 강제변환이 필요함.
 // 문자열을 정수로 강제로 바꿀순 없다.
 //		float salary = solaPay - (solaPay* tax);  이거에서 아래 코드로 바꿔줌
-		int  salary = (int)(solaPay - (solaPay* tax)); 
-		System.out.printf("솔라의 실수령액은 :  %d",  salary);
+		salary = (int)(solaPay - (solaPay* tax)); 
+		System.out.printf("솔라의 실수령액은 :  %d\n",  salary);
+		
+		/*
+		 *  next() - 스페이스키, 텝키, 엔터키를 누르면 입력 끝
+		 *  nextLine() - 엔터키 누르면 입력 끝
+		 */
+		
+		sun.nextLine();// 입력 버퍼를 비워 줌으로서 원하지 않게 다른 문자가 같은 줄에 있는 것을 방지  그 후 문자를 받는 것에도 nextLine으로 바꿔준다.
+		System.out.print("이름 :  " );
+		Artorias = sun.nextLine();
+		System.out.print("소속부서:  " );
+		Team2 = sun.nextLine();
+		
+		System.out.print("월 급여액 :");
+		artoriasPay = sun.nextInt();
+		
+		System.out.print(Artorias + "\n");
+		System.out.print(Team2+ "\n");
+		System.out.print(artoriasPay+ "\n");
+		
+		salary = (int)(artoriasPay - (artoriasPay* tax)); 
+		System.out.printf("아르토리우스의 실수령액은 :  %d",  salary);
+		
+		/*
+		 *  키보드를 누를때마다 입력버퍼라는 곳에 값이 머무르다가 운영체제에게 전달된다. 
+		 *  
+		 *  매번 비워주려고 적는건 귀찮다. 
+		 *  Integer.parseInt(sc.nextLine())를 상단에 적어주면 알아서 계속 비워준다. 내 경우엔 sun
+		 * */
 	}
 
 }
