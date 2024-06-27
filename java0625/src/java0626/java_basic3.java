@@ -20,10 +20,12 @@ public class java_basic3 {
 		
 		Scanner sun = new Scanner(System.in);
 		
+		float tax = 0.08f;
+		
 		String Sola;
 		String Team1;
 		int solaPay;
-		float tax = 0.08f;
+		
 		
 		String Artorias;
 		String Team2;

@@ -106,13 +106,14 @@ public class java_basic2 {
 		 *  Scanner 변수 = new Scanner(System.in);
 		 *  *Scanner 클레스는 내장외부클래스이므로 import해야한다.
 		 *  
-		 *  변수.nextInt(); int타입 정수만 입력
-		 *  변수.nextByte(); byte타입
-		 *  변수.nextLong(); long타입 정수만 입력
-		 *  변수.nextFloat(); float타입 실수만 입력
-		 *  변수.nextDouble(); double타입 실수만 입력
-		 *  변수. next(); 문자열 입력 
-		 *  변수.next
+		  	변수.nextInt();  int타입  정수만 입력
+		  	변수.nextByte();  byte타입 정수만 입력
+		  	변수.nextShort(); short타입 정수만 입력
+		  	변수.nextLong(); long타입 정수만 입력
+		  	변수.nextFloat(); float타입 실수만 입력
+		  	변수.nextDouble(); double타입 실수만 입력
+		  	변수.next();  문자열 입력
+		  	변수.nextLine(); 문자열 입력
 		 */
 		
 		/*
