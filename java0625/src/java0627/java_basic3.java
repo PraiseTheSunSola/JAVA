@@ -56,6 +56,16 @@ public class java_basic3 {
 		}
 		System.out.println( " 총합 : "+ sum);
 		
+//		for( int i=1; true; i++) {
+//			System.out.println(i);
+//		} // 무한으로 나옴
+		
+		/*
+		 * 반복문을 작성하려면 몇 번 반복되는가, 언제 반복문이 종료되어야 하는가
+		 * 반복문 종료시점에 대해서 먼저 생각해야 한다.
+		 * for문, while문, do~while문 모두 언제 반복이 끝나야하는가를 
+		 * 찾지 못하면 작성할 수 없다. (무한루프이든, n번 반복이든)
+		 */
 	}
 
 }
