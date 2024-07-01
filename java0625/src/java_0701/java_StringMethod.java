@@ -44,10 +44,10 @@ public class java_StringMethod {
 		Scanner sun = new Scanner(System.in);
 		
 		// 키보드로 문자입력 받기
-		System.out.print("알파벳 하나 입력 : ");
-		char alp = sun.nextLine().charAt(0);
-		
-		System.out.println("입력한 문자 : " + alp);
+//		System.out.print("알파벳 하나 입력 : ");
+//		char alp = sun.nextLine().charAt(0);
+//		
+//		System.out.println("입력한 문자 : " + alp);
 		
 		
 		// 	 문자코드중에서 기본 문자코드는 아스키코드이다.
@@ -76,9 +76,9 @@ public class java_StringMethod {
 		 
 		 //문자열 분할
 		System.out.println( Arrays.toString( word.split(" ") ));
-		String name = "이순신@김유신-강감찬@";
+		String name1 = "이순신@김유신-강감찬@";
 		
-		String[] names = name.split("@");  //  @ 기준으로 나누는 것이고 기준이 되는 문자는 배열에 들어가지 않는다. 
+		String[] names = name1.split("@");  //  @ 기준으로 나누는 것이고 기준이 되는 문자는 배열에 들어가지 않는다. 
 		System.out.println( names[1]);
 		
 		// 문자열 자르기(추출)
@@ -132,6 +132,33 @@ public class java_StringMethod {
 		System.out.println(a.replaceAll("[\\d]", ""));
 		
 		System.out.println(a.replaceAll("[\\D]", ""));
+		
+		
+		
+		// 교제 문제
+		
+		String bb = "203";
+		int cc = Integer.parseInt(bb);
+		
+		
+		String str = "내 이름은 [홍길동]입니다. 나이는 [15]살 입니다.";
+		
+		String name; // 이 변수에 "홍길동" 넣기 
+		
+		int age; // 이 변수에 15 넣기.
+		
+		
+		name = str.substring( str.indexOf("[")+1, str.indexOf("]"));
+		System.out.println(name);
+		
+		String temp = str.substring( str.lastIndexOf("[")+1, str.lastIndexOf("]"));
+		age = Integer.parseInt( temp);
+		System.out.println(temp);
+		
+		
+		
+		
+		
 		
 	}
 
