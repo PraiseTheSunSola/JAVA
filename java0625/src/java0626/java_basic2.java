@@ -93,7 +93,7 @@ public class java_basic2 {
 		 * System.out.print(출력내용);
 		 * System.out.printf(출력내용);		 
 		 * 
-		 * printf 사용시 함계 사용하는 형식지정자
+		 * printf 사용시 함께 사용하는 형식지정자
 		 *  %d, %u - 정수
 		 *  %f - 실수
 		 *  %c - 문자
