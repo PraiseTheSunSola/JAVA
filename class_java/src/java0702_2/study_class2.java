@@ -68,9 +68,8 @@ public class study_class2 {
 		
 		
 		
-		
-		
-		
+
+
 	}
 
 }
