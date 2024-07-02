@@ -17,7 +17,7 @@ public class class1 {
 		
 		// ↓↓↓↓ 클래스 인스턴스 생성 - 
 		Member member1 =  new Member(); 	// 이 안에 String name과 int age가 들어 있음.
-		Member member2 =  new Member();  // 그리고 이 변수는 참조변수임.
+		Member member2 =  new Member();  // 그리고 이 변수는 참조변수임. 오버로딩시엔 이거 불가능
 		
 		// new Member();  는 자바에선 생성자 메서드 라고 한다.  	
 		
