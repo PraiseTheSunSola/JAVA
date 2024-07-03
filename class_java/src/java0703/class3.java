@@ -9,8 +9,8 @@ public class class3 {
 	public static void main(String[] args) {
 		
 		Member member1 = new Member("이순신", 31, "군인");
-		Member member2 = new Member("문익점", 29, "산업스파이");
-		Member member3 = new Member("장영실", 45, "발명가");
+		Member member2 = new Member("문익점", 29, "섬유공장사장");
+		Member member3 = new Member("장영실", 45, "기계공학자");
 		// 태어난 년도
 		
 		
@@ -25,17 +25,24 @@ public class class3 {
 		// 그래서 void birth의 인스턴스 메서드 파라미더((	)) 안은 비우고 매개변수 자리에 this를 넣는다. 
 		// member1.birth(member1); ->  member1.birth( ); 의 모습이 된다. 
 		
-		member1.birth(	);
+//		member1.birth(	);
 
 		
 		
+		DataIdenti dataIdenti = new DataIdenti();
+		dataIdenti.ageGroup(member1.name, member1.age);
+		dataIdenti.ageGroup(member2.name, member2.age);
 		
 		
 		
 		
+		// 직업분류 - 국가직무 분류에 따라 표기
 		
-		
-		
+		// 출력 내용 -	군인 : 05. 국방 		기계공학자 - 15. 기계
+		// 섬유공장사장 - 18. 섬유의복 
+				
+		DataIdenti part = new DataIdenti();
+		part.position(member1.job);
 		
 		
 		
@@ -74,6 +81,45 @@ public class class3 {
 	}
 
 }
+
+// 컨트롤용 클래스, 실제 기능의 동작 클래스, 데이터 클래스 
+// Controller, 		Service, 			DTO(VO)
+
+class DataIdenti { // 연령대, 직업 분류 등등 데이터 분류를 위한 클래스
+	
+	void ageGroup ( String name, int age) { // 출력 여부에 따라 매개변수 갯수도 달라진다.
+		
+		String group = null;
+		group = (age/10)+ "0대";
+		System.out.println( name+ "  :  " + group);
+		
+	  }
+	
+	void position(String job ) {
+		
+//		String part = null;
+		
+		if(job.equals("군인") ) {
+			System.out.println(job + " : "+ "0.5 국방");
+			
+		}else if (job.equals("섬유공장사장") ) {
+			System.out.println(job + " : "+ "18. 섬유의복");
+			
+		}else if (job.equals("기계공학자")) {
+			System.out.println(job + " : "+ "15. 기계");
+		
+	   };
+	
+	
+    }
+
+	
+	
+	
+	
+} // DataIdenti
+
+
 
 class Member {
 		String name;	 // 이름
