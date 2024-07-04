@@ -52,7 +52,7 @@ class DiceGame{
 		this.names = new String[cnt];
 		this.diceNum = new int[cnt];
 		
-		sun.nextLine();  	// 버퍼 비우기 - 엔터 
+		sun.nextLine();  	// 버퍼 비우기 - 엔터  숫자 입력 후 문자 입력할때만 버퍼 비우는걸 입력함 
 		for ( int i=0; i<names.length; i++) {
 			System.out.print("참가자 이름 : ");
 			names[i] = sun.nextLine();
