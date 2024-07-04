@@ -22,7 +22,7 @@ class MethodUtil {
 		return new int [] {num1,num2};
 		// return으로 반환 시킬 수 있는 값은 단일 값이다.
 		// 여러개의 데이터를 return 하고 싶다면 배열로 만들어야한다. 
-		// int twoNum() {}; -> int[] twoNum() {}; 로 바꿔줘야한다.
+		// int twoNum() {}; -> int[] twoNum() {}; 로 바꿔줘야한다.!
 	}
 	
 	
