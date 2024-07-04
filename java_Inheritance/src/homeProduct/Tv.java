@@ -1,18 +1,8 @@
 package homeProduct;
 
-public class Tv {
-
-	boolean onOff;
-	Tv() {
-		this.onOff = false;
-	}
+public class Tv  extends House{
+//					(자식)				(부모)
 	
-	void poewr () {		//  tv전원 온 오프
-		
-		this.onOff = !this.onOff;
-		
-		
-	}
 	
 	
 	

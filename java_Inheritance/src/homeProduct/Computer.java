@@ -1,5 +1,5 @@
 package homeProduct;
 
-public class Computer {
+public class Computer  extends House{
 
 }
