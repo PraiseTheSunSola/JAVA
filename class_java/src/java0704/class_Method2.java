@@ -8,3 +8,14 @@ public class class_Method2 {
 	}
 
 }
+
+class Game{
+	
+	void conversion() {
+		
+	}
+	
+	
+	
+	
+}// end
