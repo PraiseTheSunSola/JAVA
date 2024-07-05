@@ -3,15 +3,15 @@ package homeProduct;
 public abstract class House {
 
 	
-	boolean onOff;
-	String brand;	 // 제품 브랜드명 
-	int price;  	// 제품 구매각겨
+	protected boolean onOff;
+	protected String brand;	 // 제품 브랜드명 
+	protected int price;  	// 제품 구매각겨
 	
-	House() {
+	protected House() {
 		this.onOff = false;
 	}
 	
-	House(String brand, int price){
+	protected House(String brand, int price){
 		this.brand = brand;
 		this.price=price;
 	}
