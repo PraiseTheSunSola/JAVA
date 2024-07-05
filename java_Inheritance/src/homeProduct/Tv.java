@@ -3,12 +3,32 @@ package homeProduct;
 public class Tv  extends House{
 //					(자식)				(부모)
 	
-	public int channel;	// 채널
-	public int vol = 5; 	// 소리 
+	private int channel = 10;	// 채널
+	private int vol = 5; 	// 소리 
 	
 	
+	// 빈 공간에 우측 클릭 -> 소스 ->  제네레이트 게터 세터 클릭 
+	// 변경하고자 하는 변수 클릭 하고 아래 클릭 하면 한번에 만들어짐 
+
 	
-	public Tv() {
+	
+	public int getChannel() {
+		return channel;
+	}
+
+	public void setChannel(int channel) {
+		this.channel = channel;
+	}
+
+	public int getVol() {
+		return vol;
+	}
+
+	public void setVol(int vol) {
+		this.vol = vol;
+	}
+
+	protected  Tv() {
 	super(); // 가 안에 들어있음. 상속을 받았다면 super() = House (); 부모를 뜻함.
 	}
 	
