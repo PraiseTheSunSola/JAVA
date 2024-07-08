@@ -21,7 +21,7 @@ public class Member {
     		this.eng = eng;
     		this.mat = mat;
     }
-//    데이터 베이스에서 가지고온 데이터 저장용 생성자 메서드
+//    데이터 베이스에서 가지고온 데이터 저장용 생성자 메서드 
     public Member(int id, String name, int kor, int eng, int mat, int total, int std_avg) {
     	this(name,kor,eng,mat);
     	this.id=id;

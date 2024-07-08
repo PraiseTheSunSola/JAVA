@@ -67,6 +67,7 @@ public class Dao {
 		}
 		
 		
+		
 //		String sql = "insert into test_member( name,kor,eng,mat,total, " 
 //						+ "std_avg) value (' "+m.getName()+" '," +m.getKor()+","+
 //						m.getEng()+"," +m.getMat()+","+m.getTotal()+","+
@@ -85,7 +86,57 @@ public class Dao {
 	}
 	
 	
-} // end Dao 
+	public Member[] select() {
+		
+		Member[] list = null;
+		String sql = "select count(*) as cnt from test_member";
+	
+	
+		try {
+				int size = 0;
+				st = conn.createStatement();
+				rs = st.executeQuery(sql);  // select 사용할땐 Query
+				
+				// ResultSet가 주소들을 반복문처럼 돌아가면서 주소를 참조하여 데이터값을 보여줌
+				// 맨 처음엔 빈 공간을 가지고 그 다음 그 다음을 돌면서 데이터가 있는 주소를 찾고 보여주고 
+				// 데이터가 없는 주소가 나온다면 동작을 그만함 
+				// ResultSet는 java꺼  / count(*)는 sql  
+				
+				
+				if( rs.next()) {
+					size = rs.getInt("cnt"); // 데이터베이스에 데이터(레코드)가 총 몇개 있냐?
+				}
+				
+				if( size !=0) {
+					int i=0;
+					list = new Member[size]; // 참조변수의 공간을 만듬/ 객체 공간을 만들지 않음
+					sql = "select * from test_member"; // 전체 데이터 조회 쿼리문(sql질의문)
+					rs = st.executeQuery(sql); // 조회결과 받기
+					
+					while( rs.next()) { // 조회 결과 하나씩 순회
+						list[i] = new Member( rs.getInt("member_id") , 
+					    rs.getString("name"), rs.getInt("kor") ,
+					    rs.getInt("eng"), rs.getInt("mat"), rs.getInt("total"),
+					    rs.getInt("std_avg"));
+					}
+				}
+				
+				
+				if( rs.next() ) {
+				System.out.println(rs.getInt("cnt"));
+				}
+		
+		}catch (Exception e) {
+			System.out.println("데이터 조회 실패");
+			
+			
+		}
+		
+		return list;
+		
+    }
+	
+}   // end Dao 
 
 
 // 드라이버 먼저 연결 -> 계정 접속 -> 쿼리문 작성
