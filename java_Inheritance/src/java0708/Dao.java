@@ -89,7 +89,7 @@ public class Dao {
 	public Member[] select() {
 		
 		Member[] list = null;
-		String sql = "select count(*) as cnt from test_member";
+		String sql = "select count(*) as sun from test_member";
 	
 	
 		try {
@@ -104,7 +104,7 @@ public class Dao {
 				
 				
 				if( rs.next()) {
-					size = rs.getInt("cnt"); // 데이터베이스에 데이터(레코드)가 총 몇개 있냐?
+					size = rs.getInt("sun"); // 데이터베이스에 데이터(레코드)가 총 몇개 있냐?
 				}
 				
 				if( size !=0) {
