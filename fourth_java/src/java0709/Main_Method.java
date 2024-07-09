@@ -45,4 +45,6 @@ interface move {
 		클라이언트가 원하는 페이지를 제공하는 메서드 
 		
 		interface를 연결해준 클래스에선 interface가 가지고 있던 추상클래스를 구현해줘야한다.
+		
+		
  */
