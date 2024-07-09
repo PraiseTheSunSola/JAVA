@@ -31,3 +31,5 @@ public class Interface_test2 {
 // 데이터만 저장하는 클래스 -> 사용자에게 제공할 데이터 클래스 -> VO,DTO
 // 									 -> 데이터베이스에 저장할 데이터 클래스 -> Entity 
 // 데이터베이스 처리 인터페이스 -> repository 
+
+// VO,DTO와 서비스 클래스가 같이 , repository와 Entity가 같이 움직이고 그걸 컨트롤 클래스에서 출력!
