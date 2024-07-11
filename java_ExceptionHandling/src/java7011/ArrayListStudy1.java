@@ -48,6 +48,26 @@ public class ArrayListStudy1 {
 		
 		
 		
+		list.add(2 , new Member("장영실", 34, ""));
+		System.out.println(list);
+		
+		
+		// 생년월일이 없는 사람을 찾아서 그 사람의 나이를 보고 년도를 넣고
+		// 0월 0일로 저장되게 하라. 
+		
+		for(Member mem : list) {
+			if( mem.getBirth().isBlank()) {
+				int year = 2024 - mem.getAge();
+				mem.setBirth(year + "0000");
+			}
+		}
+		
+		System.out.println(list);
+		
+		Member t =  new Member ("장보고", 0, "0");
+		
+		list.indexOf(t);
+		
 		
 	} // end main
 

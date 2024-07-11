@@ -18,7 +18,20 @@ public class Member {
 		return name + " , " + age + " ," + birth;
 	}
 	
-	
+	@Override
+	public boolean equals(Object  o) {
+		
+		Member tmp = (Member) o;
+		/*
+		  	a와 b를 비교 한다면 
+		  	A.equalsB 
+		  	this.equalsB 
+		  	this는 A 
+		  	Object에 들어오는건 똑같은 멤버 클래스 녀석
+		  	강제형변환을 해줘야한다. 높은거에서 낮은거 바꿀때 
+		  	부모클래스 타입인 Object를 Member 클래스로 바꿔준다. 
+		 */
+	}
 
 	public String getName() {
 		return name;
