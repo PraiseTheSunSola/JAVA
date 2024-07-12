@@ -8,6 +8,8 @@ public class LinkedListStudy1 {
 		
 		//LinkedList의 사용법도 ArrayList와 비슷하지만 몇 개의 메서드가 차이난다.
 		// LinkedList는 따로 equals를 만들어주지 않아도 된다.
+		// 노드 기반이고  꼬리에 꼬리를 무는 형태.
+		
 		LinkedList<String> list = new LinkedList<>();
 		
 		list.add("제주도");
