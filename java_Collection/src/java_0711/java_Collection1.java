@@ -181,7 +181,7 @@ public class java_Collection1 {
 	// 이름이 저장되어있는 ArrayListe에 이순신이 없으면 추가저장하고 
 	// 있으면 저장하지 않기. 
 		
-		if (!greatMan.contains("이순신") ) {
+		if (!greatMan.contains("이순신") ) { // 원래는 new String "이순신"인데 생략됨
 			greatMan.add("이순신");
 		}
 		System.out.println(greatMan);

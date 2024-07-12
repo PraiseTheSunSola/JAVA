@@ -1,4 +1,4 @@
-package java7011;
+package java_0711;
 
 import java.util.ArrayList;
 
@@ -64,10 +64,40 @@ public class ArrayListStudy1 {
 		
 		System.out.println(list);
 		
-		Member t =  new Member ("장보고", 0, "0");
+		/*
+		 		개발자가 정의한 클래스를 컬렉션에 사용하는경우
+		 		컬렉션의 메서드들을 온전히 사용하려면 필요한 메서드를
+		 		클래스에 구현해야한다.
+		 		필요한 메서드는 최상위 부모 클래스인 Object가 가지고 있다.
+		 		추가로 컬렉션에 관련된 인터페이스를 implements 하기도 해야한다. 
+		 */
 		
-		list.indexOf(t);
+
 		
+		
+		Member t =  new Member ("장보고", 28, "19960712");
+		
+		System.out.println(list.indexOf(t)); 	// Member클래스를 indexOf에 넣어서 찾기  
+		
+		System.out.println(list.contains(t));
+		// indexOf = 배열 안에서 특정 값이 같은 것이 있는지 배열 안을 돌면서 비교한다.  없으면 -1
+		// Integer 안에 equals를 개발자(내가 ) 직접 만들어줘야한다.  
+		
+		
+		list.remove(t);
+		
+		System.out.println( list);
+		
+		list.forEach(m -> System.out.println(m));
+		
+		Member[] mem = list.toArray(new Member[list.size()]);  //  동적 -> 정적 배열화
+		
+		// 다른 언어에게 데이터(값)을 넘겨줄때 필요함. 
+		
+		for( Member mm : mem) {
+			System.out.println(mm);
+		}
+		//  Member 안에 public String toString을 만들어 줘서 출력값이 나오는 것
 		
 	} // end main
 

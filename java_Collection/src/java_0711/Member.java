@@ -1,4 +1,4 @@
-package java7011;
+package java_0711;
 
 public class Member {
 	private String name;
@@ -19,9 +19,17 @@ public class Member {
 	}
 	
 	@Override
-	public boolean equals(Object  o) {
-		
+	public boolean equals(Object  o) { // 어떤 데이터로 비교할 것인가?
 		Member tmp = (Member) o;
+//		return this.age == tmp.age; 	// 나이 비교  
+//		return this.name.equals(tmp.name); // 여기서 .equals은 String name
+		boolean isSame = this.age == tmp.age; 
+		if( isSame)
+			isSame = this.name.equals(tmp.name);
+		if(isSame)
+			isSame = this.birth.equals(tmp.birth);
+		return isSame; 	//  이름, 나이, 생년월일까지 같은지 비교해서 찾는 식  
+		
 		/*
 		  	a와 b를 비교 한다면 
 		  	A.equalsB 
