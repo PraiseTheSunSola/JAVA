@@ -1,6 +1,7 @@
 package java_0711;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ArrayListStudy1 {
 
@@ -98,6 +99,27 @@ public class ArrayListStudy1 {
 			System.out.println(mm);
 		}
 		//  Member 안에 public String toString을 만들어 줘서 출력값이 나오는 것
+		
+		
+		
+		
+		// 정렬
+		
+		Collections.sort(list);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	} // end main
 
