@@ -1,6 +1,7 @@
 package java_0711;
 
-public class Member {
+
+public class Member implements Comparable<Member>{
 	private String name;
 	private int age;
 	private String birth;
@@ -64,4 +65,42 @@ public class Member {
 	public void setBirth(String birth) {
 		this.birth = birth;
 	}
-}
+
+
+	@Override
+	public int compareTo(Member o) { // 비교 해주는 메서드 
+		
+//		return this.age - o.age; 	// 나이 기준 오름 차순
+//		return (this.age - o.age)*-1; 	// 나이 기준  내림 차순 o.age - this.age도 가능
+//		return this.name.compareTo(o.name); 	//  문자열 안에 compareTo가 있기 때문에 계산이 됨.
+//		return this.name.compareTo(o.name)*-1; 	//  문자열 내림차순 
+		
+		/*
+		  			문제 
+		  			나이기준 오름차순으로 하는데
+		  			나이가 같으면 
+		  			이름기준 내림 차순으로 나오게 해라. 
+		 */
+		
+		int cmp = this.age - o.age;
+		if(cmp == 0) {
+			cmp = this.name.compareTo(o.name)*-1;
+		}
+		return cmp;
+		
+			
+			
+		
+		} // end compareTo
+	
+	
+	
+	
+	
+	
+	} 	// end Member implements Comparable<Member> 
+	
+	
+	
+	
+

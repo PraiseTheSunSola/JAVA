@@ -97,6 +97,7 @@ public class ArrayListStudy1 {
 		
 		for( Member mm : mem) {
 			System.out.println(mm);
+			
 		}
 		//  Member 안에 public String toString을 만들어 줘서 출력값이 나오는 것
 		
@@ -105,8 +106,11 @@ public class ArrayListStudy1 {
 		
 		// 정렬
 		
-		Collections.sort(list);
+		// 자바의 버블 정렬에선 계산해서 양수일 경우에만 자리를 바꾼다. 
 		
+		Collections.sort(list);
+		System.out.println("==== 정렬 후 =====");
+		list.forEach(m -> System.out.println(m));
 		
 		
 		
