@@ -23,3 +23,23 @@ public class LinkedListStudy1 {
 	}
 
 }
+
+
+      /*
+  		ArrayList와 LinkedList 차이점
+  		
+  		자료구조는 크게 두 가지로 나뉜다. 
+  		배열과 LinkedList.
+  		
+  		순차적인 작업을 할 땐 ArrayList가 좋다 (배열 기반)
+  		그렇지 않을 땐 LinkedList가 좋다 (배열보다 중간 중간 수정하는 속도가 빠름)
+  		
+  		LinkedList는 이동시간이 ArrayList에 비해 길다. 
+  		
+  		많은 양의 데이터를 순차적으로 처리 한다면 ArrayList가 좋고,
+  	    많은 양의 데이터를 수정하면서 처리 한다면 LinkedList가 좋다.
+  	    
+  	    
+  	     */
+  	   
+ 
