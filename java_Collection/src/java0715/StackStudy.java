@@ -27,10 +27,12 @@ public class StackStudy {
 					
 					
 					
-				}else { // 새 페이지 이동
+				}else  if (  !(temp.equals("1") || temp.equals("2"))  ){ // 새 페이지 이동
+					
 					back.push( now );
 					pre.clear();
 					now = temp;
+					
 				}
 				
 				System.out.println("현재 페이지 : " + now);
