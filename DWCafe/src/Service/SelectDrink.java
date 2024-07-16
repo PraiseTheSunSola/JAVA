@@ -62,7 +62,7 @@ public class SelectDrink implements Kiosk{
 		
 	} // emd selectCoffe
 
-	// 커피 선택 
+	//  차(tea)  선택 
 	private void selectTea() {
 		TeaDAO dao = new TeaDAO();
 		tea = dao.findAll();
@@ -71,10 +71,19 @@ public class SelectDrink implements Kiosk{
 		for(Integer id : ids) {
 			System.out.println(id +". " + tea.get(id));
 		}
+		
+		
 		Scanner sun = new Scanner(System.in);
 		System.out.print("메뉴 선택 : ");
 		int menu = sun.nextInt();
 		
+		// 오타로 인하여 메뉴 잘못 입력 했을때 다시 돌아가기
+		if(tea.get(menu)==null) {
+			System.out.println("올바른 입력부탁드립니다."); 
+			return; 
+		}
+              
+		//if(!tea.containsKey(menu) )return;  도 가능 
 		
 		Kiosk order = new Order( tea.get(menu));
 		order.action();

@@ -22,8 +22,8 @@ public class TeaDAO extends ParentDAO{
 			while(rs.next()) {
 						// rs.get 데이터 타입("컬럼명")
 						data.put( rs.getInt("tea_id"), 
-								new Tea( rs.getInt("price"), 
-										rs.getString("item_name") )
+								new Tea( rs.getInt("price"),  // price 대신 번호를 입력 해도 됨
+										rs.getString("item_name") ) // 마찬가지로 번호 입력 해도 됨 
 								);
 				
 			}
