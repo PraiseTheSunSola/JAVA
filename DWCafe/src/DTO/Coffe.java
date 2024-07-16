@@ -6,8 +6,17 @@ public class Coffe {
 	private String itemName;
 	private boolean deCaffein;
 	
+	public Coffe(int price, String itemName, boolean deCaffein) {
+		this.price = price;
+		this.itemName = itemName;
+		this.deCaffein = deCaffein;
+	}
 	
 	
+	@Override
+	public String toString() {
+		return itemName+ "(" +price + "원)" + ( deCaffein? "디카페인" :"");
+	}
 	
 	public boolean isDeCaffein() {
 		return deCaffein;
