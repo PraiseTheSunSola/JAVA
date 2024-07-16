@@ -10,7 +10,12 @@ public class HashMapStudy1 {
 
 	public static void main(String[] args) {
 		
+	
+		//	해싱은 해시 함수에 문자열 입력값을 넣어서 특정한 값으로 추출하는 것을 의미
+		
+		
 		HashMap<String, Integer> map = new HashMap<>();
+		
 		
 		// .put();  => key와 value를 저장할 수 있는 메서드
 		
