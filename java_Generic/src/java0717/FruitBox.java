@@ -1,6 +1,6 @@
 package java0717;
 
-public class FruitBox <T>{
+public class FruitBox <T extends Fruit>{  
 
 	private T fruit;
 	
