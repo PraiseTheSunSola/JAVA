@@ -4,6 +4,12 @@
     
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>    
 
+
+<a href="/main.jsp">로그인및 회원가입</a> <br>
+<a href="/board.jsp">게시판</a>  <br>
+<a href="/inquiry"> 문의</a> <br>
+
+
 <%--
 	<jsp:forward page="" />
 	<%

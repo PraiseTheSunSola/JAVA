@@ -58,8 +58,22 @@ public class MemberControl extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		// 입력한 아이디와 비밀번호 가져오기
+		String id= request.getParameter("id");
+		String pw = request.getParameter("pw");
+		if( id.equals("gold") && pw.equals("1234") ) {
+			// 아이디 gold, 비밀번호 1234 입력한경우에 로그인 성공
+			
+			response.sendRedirect("/");
+		}else {
+			// 로그인 실패한 경우
+			
+			request.setAttribute("fail", "아이디 또는 비밀번호가 잘못되었습니다.");
+			
+			RequestDispatcher rsd = request.getRequestDispatcher("main.jsp");
+			rsd.forward(request, response);
+		}
 		
-		System.out.println("진짜 post요철 처리하나?");
 		
 	}
 
